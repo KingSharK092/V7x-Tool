@@ -4,3 +4,23 @@ exce ('7x','lL','ghan','UP8')
 
 #Try But Don't Cry
 #http://t.me/Arab_heroes
+def delete_words(text, words_to_delete):
+    """
+    Delete specific words from a text.
+
+    Parameters:
+    text (str): The original text.
+    words_to_delete (list): A list of words to delete from the text.
+
+    Returns:
+    str: The text with the specified words deleted.
+    """
+    for word in words_to_delete:
+        text = text.replace(word, "")
+    return text
+
+# Example usage
+original_text = "This is an example sentence with some words to delete."
+words_to_remove = ["example", "delete"]
+result_text = delete_words(original_text, words_to_remove)
+print(result_text)
